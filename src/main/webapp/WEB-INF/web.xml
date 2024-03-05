@@ -1,7 +1,53 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
 
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
+    <display-name>Shop</display-name>
+
+<!-- Load the pages from the java files -->
+    
+    <servlet>
+        <servlet-name>registerPage</servlet-name>
+        <servlet-class>pages.Register</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+      <servlet-name>registerPage</servlet-name>
+      <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>loginPage</servlet-name>
+        <servlet-class>pages.Login</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>loginPage</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+
+<!-- Register servlet logic -->
+    
+    <servlet>
+        <servlet-name>registerServlet</servlet-name>
+        <servlet-class>servlets.registerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>registerServlet</servlet-name>
+        <url-pattern>/registerServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>servlets.loginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/loginServlet</url-pattern>
+    </servlet-mapping>
+    
 </web-app>
