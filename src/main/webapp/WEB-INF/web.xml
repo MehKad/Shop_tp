@@ -27,6 +27,16 @@
         <servlet-name>loginPage</servlet-name>
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>homePage</servlet-name>
+        <servlet-class>pages.Home</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>homePage</servlet-name>
+        <url-pattern>/Home</url-pattern>
+    </servlet-mapping>
 
 <!-- Register servlet logic -->
     

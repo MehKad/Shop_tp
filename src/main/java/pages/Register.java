@@ -15,6 +15,7 @@ public class Register extends HttpServlet {
       PrintWriter out = response.getWriter();
 
       out.println("<html><head><title>Register</title></head><body>");
+      out.println("<p>Parametre recu : NR = null MPR= null NC = null MPC = null</p>");
       out.println("<h1>Veuillez effectuer votre inscription</h1><br>");
       out.println("<p>(Le nom et le mot de passe > 3 caractères !!!)</p>");
       out.println("<form action=\"registerServlet\" method=\"post\">");
