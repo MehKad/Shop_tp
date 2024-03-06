@@ -85,6 +85,7 @@ public class saveServlet extends HttpServlet {
             }
             out.println("</table>");
             out.println("<h5>Total Price: " + totalPrice + "$</h5>");
+            out.println("<a href='./'>Effectuer un autre achat</a>");
          } else {
             out.println("<h3>Votre panier est vide</h3>");
          }
