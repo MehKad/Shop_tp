@@ -36,7 +36,13 @@ public class Home extends HttpServlet {
                out.println("<td>" + i.getName() + "</td>");
                out.println("<td>" + i.getDescription() + "</td>");
                out.println("<td>" + i.getPrice() + "</td>");
-               out.println("<td>Add to cart</td>");
+               out.println("<td><form action='addtocart' method='post'>");
+               out.println("<input type='hidden' name='prod_name' value='" + i.getName()
+                     + "'/>");
+               out.println("<input type='hidden' name='prod_price' value='" +
+                     i.getPrice() + "'/>");
+               out.println("<input type='submit' value='Add to Cart'/>");
+               out.println("</form></td>");
                out.println("</tr>");
             }
             out.println("</table></body></html>");
